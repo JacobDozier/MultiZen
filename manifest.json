@@ -1,0 +1,17 @@
+{
+  "name": "MultiZen",
+  "author": {
+    "name": "Jacob Dozier",
+    "email": "jacobadozier@gmail.com",
+    "url": "https://github.com/JacobDozier"
+  },
+  "defaultLocale": "en",
+  "private": true,
+  "location": {
+    "support": {
+      "ticket_sidebar": "assets/iframe.html"
+    }
+  },
+  "version": "1.0",
+  "frameworkVersion": "2.0"
+}
