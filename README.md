@@ -1,14 +1,11 @@
-# App name
+# MultiZen
 
-[brief description of the app]
+Zendesk app to integrate with the [Harvest](https://www.getharvest.com/) app to make Zendesk agents' lives easier. Datasystem Solutions, Inc. uses Harvest to track support time and would like some functionatlity to automatically blank out, or select, the current project and task within Zendesk.
 
-### The following information is displayed:
+### Tech Stack:
 
-* info1
-* info2
-* info3
+* Zendesk App Tools (ZAT)
+* Handlebars.js
+* jquery
 
-Please submit bug reports to [Insert Link](). Pull requests are welcome.
-
-### Screenshot(s):
-[put your screenshots down here.]
+Please submit bug reports [here](support@multipub.com), or via GitHub issues. Pull requests are welcome.
