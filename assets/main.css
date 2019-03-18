@@ -1,0 +1,9 @@
+.project {
+    width: 318;
+    height: 52;
+    overflow: auto;
+}
+
+html {
+    overflow: auto;
+  }

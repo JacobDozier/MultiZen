@@ -3,16 +3,25 @@
   <meta charset="utf-8">
   <!-- http://garden.zendesk.com -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@zendeskgarden/css-bedrock@7.0" type="text/css">
+  <!-- Additional styling -->
+  <link rel="stylesheet" href="main.css" type="text/css">
 </head>
 <body>
-  <h2 class="u-gamma">Hello, World!</h2>
+  <div class="project">
+    <select id="project-drop" class="project">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="opel">Opel</option>
+      <option value="audi">Audi</option>
+    </select>
+  </div>
+
   <!-- https://github.com/zendesk/zendesk_app_framework_sdk -->
   <script type="text/javascript" src="https://assets.zendesk.com/apps/sdk/2.0/zaf_sdk.js"></script>
-  <script>
-    // Initialise the Zendesk JavaScript API client
-    // https://developer.zendesk.com/apps/docs/apps-v2
-    var client = ZAFClient.init();
-    client.invoke('resize', { width: '100%', height: '200px' });
-  </script>
+
+  <!-- Import JQuery -->
+  <script src="https://cdn.jsdelivr.net/jquery/3.2.1/jquery.min.js"></script>
+
+  <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
