@@ -1,9 +1,15 @@
 .project {
-    width: 318;
-    height: 52;
+    width: 318px;
+    height: 52px;
     overflow: auto;
+}
+
+.task {
+    width: 318px;
+    height: 34px;
 }
 
 html {
     overflow: auto;
+    height: 410px;
   }

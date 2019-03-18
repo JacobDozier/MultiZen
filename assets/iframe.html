@@ -6,8 +6,11 @@
   <!-- Additional styling -->
   <link rel="stylesheet" href="main.css" type="text/css">
 </head>
+<!-- TODO Turn this into a template using handlebars.js -->
+<!-- TODO Have this template loop over a list and insert data obtained from the Harvest api. -->
 <body>
-  <div class="project">
+  <h2>Project</h2>
+  <div>
     <select id="project-drop" class="project">
       <option value="volvo">Volvo</option>
       <option value="saab">Saab</option>
@@ -15,10 +18,17 @@
       <option value="audi">Audi</option>
     </select>
   </div>
+  <h2>Task</h2>
+  <div>
+    <select id="task-drop" class="task">
+      <option value="Administrative">Administrative</option>
+      <option value="Research">Research</option>
+      <option value="Support">Support</option>
+    </select>
+  </div>
 
   <!-- https://github.com/zendesk/zendesk_app_framework_sdk -->
   <script type="text/javascript" src="https://assets.zendesk.com/apps/sdk/2.0/zaf_sdk.js"></script>
-
   <!-- Import JQuery -->
   <script src="https://cdn.jsdelivr.net/jquery/3.2.1/jquery.min.js"></script>
 
