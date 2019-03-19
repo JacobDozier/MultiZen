@@ -6,17 +6,21 @@
   <!-- Additional styling -->
   <link rel="stylesheet" href="main.css" type="text/css">
 </head>
-<!-- TODO Turn this into a template using handlebars.js -->
-<!-- TODO Have this template loop over a list and insert data obtained from the Harvest api. -->
+<!-- TODO Have this template loop over a list -->
 <body>
   <script id="time-template" type="text/x-handlebars-template">
+    <p>{{project_data.value}}</p>
     <h2>Project</h2>
     <div>
       <select class="project">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="opel">Opel</option>
-        <option value="audi">Audi</option>
+        <!-- {{project_data}} -->
+        {{#each project_data}}
+          <option value={{this}}>{{this}}</option>
+        {{/each}}
+        <!-- <option value={{value}}>{{value}}</option>
+        <option value={{value1}}>{{value1}}</option>
+        <option value={{value2}}>{{value2}}</option>
+        <option value={{value3}}>{{value3}}</option> -->
       </select>
     </div>
     <h2>Task</h2>
