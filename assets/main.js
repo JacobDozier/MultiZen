@@ -7,17 +7,17 @@ $(function() {
 // Insert data obtained from the Harvest api.
 function showInfo() {
     var project_data = 
-    // ["MultiZen", "Value1", "Value2", "Value3"];
-    {
-        'value': 'MultiZen',
-        'value1': 'value1',
-        'value2': 'value2',
-        'value3': 'value3'
-    };
+    ["MultiZen", "Value1", "Value2", "Value3"];
+    // {
+    //     'value': 'MultiZen',
+    //     'value1': 'value1',
+    //     'value2': 'value2',
+    //     'value3': 'value3'
+    // };
     console.log(project_data);
 
     var source = $("#time-template").html();
     var template = Handlebars.compile(source);
-    var html = template(project_data);
-    $("#content").html(html);
+    // var html = template(project_data);
+    $("#content").html(template(project_data));
 }

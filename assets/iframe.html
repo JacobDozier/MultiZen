@@ -9,18 +9,12 @@
 <!-- TODO Have this template loop over a list -->
 <body>
   <script id="time-template" type="text/x-handlebars-template">
-    <p>{{project_data.value}}</p>
     <h2>Project</h2>
     <div>
-      <select class="project">
-        <!-- {{project_data}} -->
+      <select class="project" >
         {{#each project_data}}
-          <option value={{this}}>{{this}}</option>
+          <option value="this">this</option>
         {{/each}}
-        <!-- <option value={{value}}>{{value}}</option>
-        <option value={{value1}}>{{value1}}</option>
-        <option value={{value2}}>{{value2}}</option>
-        <option value={{value3}}>{{value3}}</option> -->
       </select>
     </div>
     <h2>Task</h2>
