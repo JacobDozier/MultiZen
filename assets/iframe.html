@@ -11,9 +11,14 @@
   <script id="time-template" type="text/x-handlebars-template">
     <h2>Project</h2>
     <div>
+      <p>Test</p>
       <select class="project">
         {{#each test}}
-          <option value="{{this}}">{{this}}</option>
+          <optgroup label="{{header}}">
+            {{#each categories}}
+            <option value="{{this}}">{{this}}</option>
+            {{/each}}
+          </optgroup>
         {{/each}}
       </select>
     </div>

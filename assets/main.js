@@ -13,9 +13,10 @@ function showInfo() {
     var project_data = 
     {
         test: [
-            "MultiZen",
-            "Value 1",
-            "Value 2"
+            {header:"ACBJ", categories: ["Billable", "Support", "Non-Support"]},
+            {header:"ALM", categories: ["Billable", "Support", "Non-Support"]},
+            {header: "IBJ", categories: ["Billable", "Support", "Non-Support"]},
+            {header: "DSI", categories: ["Internal Time"]}
         ]
     }
     
