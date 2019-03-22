@@ -6,23 +6,15 @@
   <!-- Additional styling -->
   <link rel="stylesheet" href="main.css" type="text/css">
 </head>
-<!-- TODO Have this template loop over a list -->
+<!-- TODO Add the sub categories of each Project -->
 <body>
   <script id="time-template" type="text/x-handlebars-template">
     <h2>Project</h2>
     <div>
-      <select class="project" >
-        {{#each project_data}}
-          <option value="this">this</option>
+      <select class="project">
+        {{#each test}}
+          <option value="{{this}}">{{this}}</option>
         {{/each}}
-      </select>
-    </div>
-    <h2>Task</h2>
-    <div>
-      <select class="task">
-        <option value="Administrative">Administrative</option>
-        <option value="Research">Research</option>
-        <option value="Support">Support</option>
       </select>
     </div>
   </script>
