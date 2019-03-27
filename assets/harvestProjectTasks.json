@@ -1,0 +1,1816 @@
+{
+    "task_assignments": [
+        {
+            "id": 216537987,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924741,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537986,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924739,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537985,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924738,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537984,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924737,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537983,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924732,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537982,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924731,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537981,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924729,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537980,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924728,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537979,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924726,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537978,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924724,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537977,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924722,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537976,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924721,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537975,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924714,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537974,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924713,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537973,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924712,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537972,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924705,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537971,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924694,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537970,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924692,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537969,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924069,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537968,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924067,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537967,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924064,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537966,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924062,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537965,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924061,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537964,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924059,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537963,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924051,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537962,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924050,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537961,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924048,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537960,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924045,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537959,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924044,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537958,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924043,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537957,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924042,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537956,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924041,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537955,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924040,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537954,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924038,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537953,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924037,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537952,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924036,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537951,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924034,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537950,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924033,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537949,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924032,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537948,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924029,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537947,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924028,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537946,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924027,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537945,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924024,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537944,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924023,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537943,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924021,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537942,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924018,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537941,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924014,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537940,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924013,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537939,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924007,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537938,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924006,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537937,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19924004,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537936,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923842,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537935,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923841,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537934,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923838,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537933,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923831,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537932,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923828,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537931,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:08Z",
+            "updated_at": "2019-02-06T21:48:08Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923826,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537930,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923820,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537929,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923818,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537928,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923815,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537927,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923809,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537926,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923807,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537925,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923805,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537924,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923798,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537923,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923797,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537922,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923796,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537921,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923770,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537920,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923769,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537919,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923767,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537918,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923763,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537917,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923759,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537916,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923758,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537915,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923751,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537914,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923749,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537913,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923747,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537912,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923742,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537911,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923741,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537910,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923738,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537909,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923733,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537908,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923732,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537907,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923730,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537906,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923725,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537905,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923724,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537904,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923722,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537903,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923697,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537902,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923696,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537901,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923695,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537900,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923691,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537899,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923690,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537898,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923689,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537897,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923687,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537896,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923685,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537895,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923682,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537894,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923677,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537893,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923673,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537892,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923669,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537891,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923665,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537890,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923661,
+                "name": "Non Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537889,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19923649,
+                "name": "Support",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        },
+        {
+            "id": 216537888,
+            "billable": false,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z",
+            "hourly_rate": null,
+            "budget": null,
+            "project": {
+                "id": 19920104,
+                "name": "Billable",
+                "code": ""
+            },
+            "task": {
+                "id": 11483388,
+                "name": "INCL"
+            }
+        }
+    ],
+    "per_page": 100,
+    "total_pages": 42,
+    "total_entries": 4119,
+    "next_page": 2,
+    "previous_page": null,
+    "page": 1,
+    "links": {
+        "first": "https://api.harvestapp.com/v2/task_assignments?page=1&per_page=100",
+        "next": "https://api.harvestapp.com/v2/task_assignments?page=2&per_page=100",
+        "previous": null,
+        "last": "https://api.harvestapp.com/v2/task_assignments?page=42&per_page=100"
+    }
+}

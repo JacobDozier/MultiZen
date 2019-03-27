@@ -1,0 +1,456 @@
+{
+    "tasks": [
+        {
+            "id": 11483388,
+            "name": "INCL",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": true,
+            "is_active": true,
+            "created_at": "2019-02-06T21:48:07Z",
+            "updated_at": "2019-02-06T21:48:07Z"
+        },
+        {
+            "id": 11399360,
+            "name": "Sales",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:50:36Z",
+            "updated_at": "2019-01-25T18:50:36Z"
+        },
+        {
+            "id": 11399359,
+            "name": "On the Job Training",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:50:36Z",
+            "updated_at": "2019-01-25T18:50:36Z"
+        },
+        {
+            "id": 11399358,
+            "name": "Paid Time Off/Holiday",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:50:36Z",
+            "updated_at": "2019-01-25T18:50:36Z"
+        },
+        {
+            "id": 11399357,
+            "name": "Management Meeting",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:50:36Z",
+            "updated_at": "2019-01-25T18:50:36Z"
+        },
+        {
+            "id": 11399356,
+            "name": "Bereavement",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:50:36Z",
+            "updated_at": "2019-01-25T18:50:36Z"
+        },
+        {
+            "id": 11399337,
+            "name": "Full Service",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:47:45Z",
+            "updated_at": "2019-01-25T18:47:45Z"
+        },
+        {
+            "id": 11399336,
+            "name": "Data Entry - Full Service",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:47:45Z",
+            "updated_at": "2019-01-25T18:47:45Z"
+        },
+        {
+            "id": 11399203,
+            "name": "Voice Mail Msg Rcvd",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:42Z",
+            "updated_at": "2019-01-25T18:32:42Z"
+        },
+        {
+            "id": 11399202,
+            "name": "Voice Mail Msg Left",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:42Z",
+            "updated_at": "2019-01-25T18:32:42Z"
+        },
+        {
+            "id": 11399201,
+            "name": "Upgrades",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:42Z",
+            "updated_at": "2019-01-25T18:32:42Z"
+        },
+        {
+            "id": 11399200,
+            "name": "Training",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399199,
+            "name": "Training - OnSite",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399198,
+            "name": "Testing Jira/Xrefs",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399197,
+            "name": "System Configuration",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399196,
+            "name": "Systems Testing",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399195,
+            "name": "Support Documentation",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399194,
+            "name": "Research",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399193,
+            "name": "Quote Requests for Enhancement",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399192,
+            "name": "Planning",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399191,
+            "name": "Operating System",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399190,
+            "name": "Meetings",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399189,
+            "name": "Installation",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399188,
+            "name": "InHouse Support/Help",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399187,
+            "name": "Set Up Environment",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399186,
+            "name": "Email Msg Sent",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399185,
+            "name": "Email Msg Rcvd",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399184,
+            "name": "System Design",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399183,
+            "name": "Data Processing",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399182,
+            "name": "Documentation",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399181,
+            "name": "Development",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399180,
+            "name": "Conversion",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399179,
+            "name": "Consulting - Technical",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399178,
+            "name": "Conference Call",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399177,
+            "name": "Consulting - Business Operations",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399176,
+            "name": "Comp Time",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399175,
+            "name": "Phone Call",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399174,
+            "name": "System Analysis",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399173,
+            "name": "Administrative",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:32:41Z",
+            "updated_at": "2019-01-25T18:32:41Z"
+        },
+        {
+            "id": 11399066,
+            "name": "Consulting",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": false,
+            "is_active": true,
+            "created_at": "2019-01-25T18:21:50Z",
+            "updated_at": "2019-01-25T18:21:50Z"
+        },
+        {
+            "id": 10894369,
+            "name": "Billable",
+            "billable_by_default": true,
+            "default_hourly_rate": 150.0,
+            "is_default": true,
+            "is_active": true,
+            "created_at": "2018-11-05T21:28:01Z",
+            "updated_at": "2018-11-27T15:50:57Z"
+        },
+        {
+            "id": 10894368,
+            "name": "Non Support",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": true,
+            "is_active": true,
+            "created_at": "2018-11-05T21:28:01Z",
+            "updated_at": "2018-11-27T15:50:47Z"
+        },
+        {
+            "id": 10894367,
+            "name": "Support",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": true,
+            "is_active": true,
+            "created_at": "2018-11-05T21:28:01Z",
+            "updated_at": "2018-11-27T15:50:41Z"
+        },
+        {
+            "id": 10894329,
+            "name": "Business Development",
+            "billable_by_default": false,
+            "default_hourly_rate": null,
+            "is_default": true,
+            "is_active": false,
+            "created_at": "2018-11-05T21:23:06Z",
+            "updated_at": "2018-11-27T15:47:53Z"
+        }
+    ],
+    "per_page": 100,
+    "total_pages": 1,
+    "total_entries": 44,
+    "next_page": null,
+    "previous_page": null,
+    "page": 1,
+    "links": {
+        "first": "https://api.harvestapp.com/v2/tasks?page=1&per_page=100",
+        "next": null,
+        "previous": null,
+        "last": "https://api.harvestapp.com/v2/tasks?page=1&per_page=100"
+    }
+}
