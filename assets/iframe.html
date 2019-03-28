@@ -8,10 +8,9 @@
 </head>
 <!-- TODO Add the sub categories of each Project -->
 <body>
-  <script id="time-template" type="text/x-handlebars-template">
+  <script id="project-template" type="text/x-handlebars-template">
     <h2>Project</h2>
     <div>
-      <p>Test</p>
       <select class="project">
         {{#each test}}
           <optgroup label="{{header}}">
@@ -19,6 +18,17 @@
             <option value="{{this}}">{{this}}</option>
             {{/each}}
           </optgroup>
+        {{/each}}
+      </select>
+    </div>
+  </script>
+
+  <script id="task-template" type="text/x-handlebars-template">
+    <h2>Project</h2>
+    <div>
+      <select class="project">
+        {{#each tasks}}
+          <option value="{{id}}">{{name}}</option>
         {{/each}}
       </select>
     </div>
