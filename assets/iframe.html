@@ -12,10 +12,10 @@
     <h2>Project</h2>
     <div>
       <select class="project">
-        {{#each test}}
-          <optgroup label="{{header}}">
+        {{#each projects}}
+          <optgroup label="{{client}}">
             {{#each categories}}
-            <option value="{{this}}">{{this}}</option>
+            <option value="{{id}}">{{name}}</option>
             {{/each}}
           </optgroup>
         {{/each}}
@@ -24,9 +24,9 @@
   </script>
 
   <script id="task-template" type="text/x-handlebars-template">
-    <h2>Project</h2>
+    <h2>Task</h2>
     <div>
-      <select class="project">
+      <select class="task">
         {{#each tasks}}
           <option value="{{id}}">{{name}}</option>
         {{/each}}
@@ -41,6 +41,7 @@
   <!-- Import JQuery -->
   <script src="https://cdn.jsdelivr.net/jquery/3.2.1/jquery.min.js"></script>
 
+  <script type="json/javascript" src="apiCalls.js"></script>
   <script type="text/javascript" src="main.js"></script>
 
   <div id="content"></div>
