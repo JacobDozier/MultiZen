@@ -17,13 +17,15 @@ function showProject() {
             "Authorization": "Bearer 1798431.pt.nVpdLY3VMBZ-Z2-K2GBwL5H_ObIJHFpCWo82YSfDWcf7eQJ3q_bKyGkN29uuddg6sRR6Cch3_yCcPOEMv3MtBg",
             "Harvest-Account-ID": "1009919"
         }
-    }).then(function(data) {
-        var harvestResponse = data;
-        console.log(harvestResponse);
-        $("#content").html(template(harvestResponse));
-    });
+    }).then(function(data){
+        printResponse(data, template)});
 }
 
+function printResponse(data, template) {
+    var harvestResponse = data;
+    console.log(harvestResponse);
+    $("#content").html(template(harvestResponse));
+}
 
 // function showTask() {
 
