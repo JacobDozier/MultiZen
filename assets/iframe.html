@@ -13,9 +13,9 @@
     <div>
       <select class="project">
         {{#each projects}}
-          <optgroup label="{{client}}">
-            {{#each categories}}
-            <option value="{{id}}">{{name}}</option>
+          <optgroup label="{{clients.name}}">
+            {{#each projects}}
+              <option value="{{projects.id}}">{{projects.name}}</option>
             {{/each}}
           </optgroup>
         {{/each}}
