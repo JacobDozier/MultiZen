@@ -47,6 +47,7 @@ function formatProjects(data) {
     console.log(projects[project].name);
 
     var client = project.client;
+    // TODO add a project array to the client.
 
     console.log(clients);
 
@@ -54,9 +55,9 @@ function formatProjects(data) {
     if (i >= 0) {
       clients[i].projects.push({"id": project.id, "name": project.name});
     } else { // Else if the client id is not in the clients array.
-      // TODO it is failing at clients.projects because the client array is empty and does not have any projects.
-      client.projects = {"id": project.id, "name": project.name};
+      // TODO it is failing at clients.projects because the clients are not being assigned project objects.
       clients.push(client);
+      client.projects = {"id": project.id, "name": project.name};
     }
     return clients;
   }
