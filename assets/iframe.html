@@ -14,8 +14,8 @@
       <select class="project">
         {{#each projects}}
           <optgroup label="{{clients.name}}">
-            {{#each projects}}
-              <option value="{{projects.id}}">{{projects.name}}</option>
+            {{#each client.clientProjects}}
+              <option value="{{clientProjects.id}}">{{clientProjects.name}}</option>
             {{/each}}
           </optgroup>
         {{/each}}

@@ -43,21 +43,25 @@ function formatProjects(data) {
   for (project in projects) {
 
     console.log("for project in projects");
-    console.log(projects);
-    console.log(projects[project].name);
+    console.log(project);
 
     var client = project.client;
-    // TODO add a project array to the client.
+    var clientProjects = new Array();
+    // add a (empty) project array to the client.
+    client = client + clientProjects;
 
+    console.log("clients");
     console.log(clients);
+    console.log("client");
+    console.log(client);
 
     var i = indexOfClient(clients, client);
     if (i >= 0) {
-      clients[i].projects.push({"id": project.id, "name": project.name});
+      clients[i].clientProjects.push({"id": project.id, "name": project.name});
     } else { // Else if the client id is not in the clients array.
       // TODO it is failing at clients.projects because the clients are not being assigned project objects.
+      client.clientProjects.push({"id": project.id, "name": project.name});
       clients.push(client);
-      client.projects = {"id": project.id, "name": project.name};
     }
     return clients;
   }
