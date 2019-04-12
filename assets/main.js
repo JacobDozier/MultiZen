@@ -45,7 +45,10 @@ function formatProjects(data) {
     console.log("for project in projects");
     console.log(project);
 
-    var client = project.client;
+    console.log("projects[project].client");
+    console.log(projects[project].client);
+    
+    var client = projects[project].client;
     var clientProjects = new Array();
     // add a (empty) project array to the client.
     client = client + clientProjects;
