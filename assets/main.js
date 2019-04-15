@@ -19,6 +19,7 @@ function showProject() {
           "Harvest-Account-ID": "1009919"
       }
   }).then(function(data){
+      console.log(data);
       var formattedData = formatProjects(data);
       printResponse(formattedData, template)});
 }
@@ -38,9 +39,9 @@ function showTask() {
 }
 
 function formatProjects(data) {
-  var clients = [];
+  var clients = new Array();
   var projects = data.projects;
-  for (project in projects) {
+  for (var project in projects) {
 
     console.log("for project in projects");
     console.log(project);
@@ -48,10 +49,10 @@ function formatProjects(data) {
     console.log("projects[project].client");
     console.log(projects[project].client);
     
-    var client = projects[project].client;
+    var client = project.client;
     var clientProjects = new Array();
     // add a (empty) project array to the client.
-    client = client + clientProjects;
+    client += clientProjects;
 
     console.log("clients");
     console.log(clients);
@@ -60,7 +61,7 @@ function formatProjects(data) {
 
     var i = indexOfClient(clients, client);
     if (i >= 0) {
-      clients[i].clientProjects.push({"id": project.id, "name": project.name});
+      clients[i].client.clientProjects.push({"id": project.id, "name": project.name});
     } else { // Else if the client id is not in the clients array.
       // TODO it is failing at clients.projects because the clients are not being assigned project objects.
       client.clientProjects.push({"id": project.id, "name": project.name});
