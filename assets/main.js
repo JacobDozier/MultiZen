@@ -73,7 +73,6 @@ function formatProjects(data) {
   
 function indexOfClient(clients, client) {
   var i = 0;
-  // TODO maybe need to loop through and populate the clients array first.
   for (c in clients) {
     if (c.id === client.id) {
       return i;
