@@ -5,13 +5,12 @@ $(function() {
   tasks = showTask();
 });
 
-// TODO Split JSON returned from api to group projects by client.
-// TODO Not recieving the full list of projects because there are two pages in Harvest.
-// Max of 100 per page.
 function showProject() {
   var source = $("#project-template").html();
   var template = Handlebars.compile(source);
 
+  // Call Harvest api for the first page of projects.
+  // TODO Loop through all populated pages of projects. Max 100/page.
   $.ajax({
       url: "https://api.harvestapp.com/v2/projects",
       headers: {
@@ -28,6 +27,7 @@ function showTask() {
   var source = $("#task-template").html();
   var template = Handlebars.compile(source);
 
+  // TODO use the Harvest Project Tasks to link Tasks to Projects.
   $.ajax({
       url: "https://api.harvestapp.com/v2/tasks",
       headers: {
@@ -38,6 +38,7 @@ function showTask() {
       printResponse(data, template)});
 }
 
+// TODO Split JSON returned from api to group projects by client.
 function formatProjects(data) {
   var clients = new Array();
   var projects = data.projects;
@@ -48,11 +49,10 @@ function formatProjects(data) {
 
     console.log("projects[project].client");
     console.log(projects[project].client);
-    
-    var client = project.client;
-    var clientProjects = new Array();
+    // Not sure why project isn't a project from the projects array. Returns as an integer/index.
+    var client = projects[project].client;
     // add a (empty) project array to the client.
-    client += clientProjects;
+    client.projectList = [];
 
     console.log("clients");
     console.log(clients);
@@ -61,10 +61,12 @@ function formatProjects(data) {
 
     var i = indexOfClient(clients, client);
     if (i >= 0) {
-      clients[i].client.clientProjects.push({"id": project.id, "name": project.name});
+      clients[i].client.projectList.push({"id": project.id, "name": project.name});
     } else { // Else if the client id is not in the clients array.
-      // TODO it is failing at clients.projects because the clients are not being assigned project objects.
-      client.clientProjects.push({"id": project.id, "name": project.name});
+      // TODO currently unable to push a project element into the client's project array/list.
+      // "Query.Deferred exception: Cannot read property 'push' of undefined TypeError: Cannot read property 'push' of undefined
+      // at formatProjects (http://localhost:4567/main.js:69:29)"
+      client.projectList.push({"id": project.id, "name": project.name});
       clients.push(client);
     }
     return clients;
@@ -84,6 +86,5 @@ function indexOfClient(clients, client) {
 
 function printResponse(data, template) {
   var harvestResponse = data;
-  console.log(harvestResponse);
   $("#content").html(template(harvestResponse));
 }
