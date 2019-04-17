@@ -20,6 +20,8 @@ function showProject() {
   }).then(function(data){
       console.log(data);
       var formattedData = formatProjects(data);
+      console.log("formattedData");
+      console.log(formattedData);
       printResponse(formattedData, template)});
 }
 
@@ -44,20 +46,20 @@ function formatProjects(data) {
   var projects = data.projects;
   for (var project in projects) {
 
-    console.log("for project in projects");
-    console.log(project);
+    // console.log("for project in projects");
+    // console.log(project);
 
-    console.log("projects[project].client");
-    console.log(projects[project].client);
+    // console.log("projects[project].client");
+    // console.log(projects[project].client);
     // Not sure why project isn't a project from the projects array. Returns as an integer/index.
     var client = projects[project].client;
     // add a (empty) project array to the client.
     client.projectList = [];
 
-    console.log("clients");
-    console.log(clients);
-    console.log("client");
-    console.log(client);
+    // console.log("clients");
+    // console.log(clients);
+    // console.log("client");
+    // console.log(client);
 
     var i = indexOfClient(clients, client);
     if (i >= 0) {
@@ -66,7 +68,7 @@ function formatProjects(data) {
       // TODO currently unable to push a project element into the client's project array/list.
       // "Query.Deferred exception: Cannot read property 'push' of undefined TypeError: Cannot read property 'push' of undefined
       // at formatProjects (http://localhost:4567/main.js:69:29)"
-      client.projectList.push({"id": project.id, "name": project.name});
+      client.projectList.push({"id": projects[project].id, "name": projects[project].name});
       clients.push(client);
     }
     return clients;
