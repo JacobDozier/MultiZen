@@ -12,10 +12,10 @@
     <h2>Project</h2>
     <div>
       <select class="project">
-        {{#each projects}}
-          <optgroup label="{{clients.name}}">
-            {{#each client.clientProjects}}
-              <option value="{{clientProjects.id}}">{{clientProjects.name}}</option>
+        {{#each formattedData}}
+          <optgroup label="{{formattedData.name}}">
+            {{#each formattedData.projectList}}
+              <option value="{{formattedData.projectList.id}}">{{formattedData.projectList.name}}</option>
             {{/each}}
           </optgroup>
         {{/each}}
