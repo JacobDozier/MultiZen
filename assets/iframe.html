@@ -12,10 +12,10 @@
     <h2>Project</h2>
     <div>
       <select class="project">
-        {{#each formattedData}}
-          <optgroup label="{{formattedData.name}}">
-            {{#each formattedData.projectList}}
-              <option value="{{formattedData.projectList.id}}">{{formattedData.projectList.name}}</option>
+        {{#each this}}
+          <optgroup label="{{name}}">
+            {{#each this.projectList}}
+              <option value="{{id}}">{{name}}</option>
             {{/each}}
           </optgroup>
         {{/each}}
@@ -45,5 +45,6 @@
   <script type="text/javascript" src="main.js"></script>
 
   <div id="content"></div>
+  <div id="tasksContent"></div>
 </body>
 </html>
