@@ -1,8 +1,36 @@
 $(function() {
   var client = ZAFClient.init();
   client.invoke('resize', { width: '100%', height: '350px' });
-  projects = showProject();
-  tasks = showTask();
+
+  // TODO Use this to secure api credentials.
+  // var getProjects = {
+  //   url: "https://api.harvestapp.com/v2/projects",
+  //   headers: {
+  //   "Authorization": "Bearer {{setting.token}}",
+  //   "Harvest-Account-ID": "{{setting.Harvest-Account-ID}}"},
+  //   secure: true,
+  //   type: 'GET',
+  //   dataType: 'json'
+  // };
+
+  // var getTasks = {
+  //   url: "https://api.harvestapp.com/v2/tasks",
+  //   headers: {
+  //   "Authorization": "Bearer {{setting.token}}",
+  //   "Harvest-Account-ID": "{{setting.Harvest-Account-ID}}"},
+  //   secure: true,
+  //   type: 'GET',
+  //   dataType: 'json'
+  // };
+  
+  // client.request(getProjects).then(function(data){
+    //   var formattedData = formatProjects(data);
+    //   printResponse(formattedData, template)
+  // });
+
+  var dispProject = showProject();
+  var dispTask = showTask();
+  console.log("completed");
 });
 
 function showProject() {
@@ -18,10 +46,7 @@ function showProject() {
           "Harvest-Account-ID": "1009919"
       }
   }).then(function(data){
-      console.log(data);
       var formattedData = formatProjects(data);
-      console.log("formattedData");
-      console.log(formattedData);
       printResponse(formattedData, template)});
 }
 
@@ -37,7 +62,7 @@ function showTask() {
           "Harvest-Account-ID": "1009919"
       }
   }).then(function(data){
-      printResponse(data, template)});
+      printTasks(data, template)});
 }
 
 // TODO Split JSON returned from api to group projects by client.
@@ -71,6 +96,17 @@ function indexOfClient(clients, client) {
 }
 
 function printResponse(data, template) {
-  var harvestResponse = data;
+  var harvestResponse = {}
+  harvestResponse = data;
+  console.log("harvestResponse");
+  console.log(harvestResponse);
   $("#content").html(template(harvestResponse));
+}
+
+function printTasks(data, template) {
+  var tasksResponse = {}
+  tasksResponse = data;
+  console.log("tasksResponse");
+  console.log(tasksResponse);
+  $("#tasksContent").html(template(tasksResponse));
 }
