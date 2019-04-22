@@ -28,13 +28,13 @@ $(function() {
     //   printResponse(formattedData, template)
   // });
 
-  $("#clients").change ( function () {
-    var targID  = $(this).val ();
-    $("div.projects").hide ();
-    $('#' + targID).show ();
-  });
   showProject();
   showTask();
+  $('#projectsContent').on('change', 'project', function ()
+  {
+    var label = $(this.options[this.selectedIndex]).closest('optgroup').prop('label');
+    console.log(label);
+  });
 });
 
 function showProject() {
@@ -51,7 +51,7 @@ function showProject() {
       }
   }).then(function(data){
       var formattedData = formatProjects(data);
-      printResponse("", formattedData, template)});
+      printResponse("projects", formattedData, template)});
 }
 
 function showTask() {
@@ -75,24 +75,24 @@ function formatProjects(data) {
   var projects = data.projects;
   projects.forEach((project) => {
 
-    var client = project.client;
+    var tempClient = project.client;
     // add a (empty) project array to the client.
-    client.projectList = [];
+    tempClient.projectList = [];
 
-    var i = indexOfClient(clients, client);
+    var i = indexOfClient(clients, tempClient);
     if (i >= 0) {
       clients[i].projectList.push({"id": project.id, "name": project.name});
     } else { // Else if the client id is not in the clients array.
-      client.projectList.push({"id": project.id, "name": project.name});
-      clients.push(client);
+      tempClient.projectList.push({"id": project.id, "name": project.name});
+      clients.push(tempClient);
     }
   });
   return clients;
 }
   
-function indexOfClient(clients, client) {
+function indexOfClient(clients, tempClient) {
   for (var i = 0; i < clients.length; i++) {
-    if (clients[i].id === client.id) {
+    if (clients[i].id === tempClient.id) {
       return i;
     }
   }

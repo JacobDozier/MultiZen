@@ -9,26 +9,20 @@
 <!-- TODO Need to rework the templates -->
 <body>
   <script id="project-template" type="text/x-handlebars-template">
-    <h2>Client</h2>
-    <!-- Displays the list of clients -->
-    <div>
-      <select class="client" id="clients">
-        <option value="">-Select a client-</option>
-        {{#each this}}
-          <option value="{{id}}">{{name}}</option>
-        {{/each}}
-      </select>
-    </div>
     <h2>Project</h2>
-    <!-- Displays the projects for the client listed above -->
-    <div id="projects">
-      <select class="project">
-        <option value="">-Select a project-</option>
-        {{#if this.projectList}}
-        {{#each this.projectList}}
-          <option value="{{id}}">{{name}}</option>
+    <div>
+      <select class="project" id="projects">
+        {{#each this}}
+          <optgroup label="{{name}}">
+            {{#each this.projectList}}
+              {{#if selected}}
+                <option value="{{id}}" {{#selected}}selected="selected"{{/selected}}>{{name}}</option>
+              <!-- {{else}}
+                <option value="{{id}}">{{name}}</option> -->
+              {{/if}}
+            {{/each}}
+          </optgroup>
         {{/each}}
-        {{/if}}
       </select>
     </div>
   </script>
@@ -37,7 +31,7 @@
     <h2>Task</h2>
     <div>
       <select class="task">
-        <option value="">-Select a task-</option>
+        <option value="">Select a task</option>
         {{#each tasks}}
           <option value="{{id}}">{{name}}</option>
         {{/each}}
@@ -55,7 +49,7 @@
   <script type="json/javascript" src="apiCalls.js"></script>
   <script type="text/javascript" src="main.js"></script>
 
-  <div id="Content"></div>
+  <div id="projectsContent"></div>
   <div id="tasksContent"></div>
 </body>
 </html>
