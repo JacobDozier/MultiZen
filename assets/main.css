@@ -1,3 +1,9 @@
+.client {
+    width: 318px;
+    height: 52px;
+    overflow: auto;
+}
+
 .project {
     width: 318px;
     height: 52px;

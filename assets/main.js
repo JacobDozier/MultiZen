@@ -28,9 +28,13 @@ $(function() {
     //   printResponse(formattedData, template)
   // });
 
-  var dispProject = showProject();
-  var dispTask = showTask();
-  console.log("completed");
+  $("#clients").change ( function () {
+    var targID  = $(this).val ();
+    $("div.projects").hide ();
+    $('#' + targID).show ();
+  });
+  showProject();
+  showTask();
 });
 
 function showProject() {
@@ -47,7 +51,7 @@ function showProject() {
       }
   }).then(function(data){
       var formattedData = formatProjects(data);
-      printResponse(formattedData, template)});
+      printResponse("", formattedData, template)});
 }
 
 function showTask() {
@@ -62,10 +66,10 @@ function showTask() {
           "Harvest-Account-ID": "1009919"
       }
   }).then(function(data){
-      printTasks(data, template)});
+      printResponse("tasks", data, template)});
 }
 
-// TODO Split JSON returned from api to group projects by client.
+// Split JSON returned from Harvest to group projects by client.
 function formatProjects(data) {
   var clients = new Array();
   var projects = data.projects;
@@ -95,18 +99,10 @@ function indexOfClient(clients, client) {
   return -1;
 }
 
-function printResponse(data, template) {
+function printResponse(divLocation, data, template) {
   var harvestResponse = {}
   harvestResponse = data;
   console.log("harvestResponse");
   console.log(harvestResponse);
-  $("#content").html(template(harvestResponse));
-}
-
-function printTasks(data, template) {
-  var tasksResponse = {}
-  tasksResponse = data;
-  console.log("tasksResponse");
-  console.log(tasksResponse);
-  $("#tasksContent").html(template(tasksResponse));
+  $("#" + divLocation + "Content").html(template(harvestResponse));
 }
