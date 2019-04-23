@@ -3,6 +3,7 @@ $(function() {
   client.invoke('resize', { width: '100%', height: '350px' });
 
   // TODO Use this to secure api credentials.
+  // This won't work with local hosting because
   // var getProjects = {
   //   url: "https://api.harvestapp.com/v2/projects",
   //   headers: {
@@ -28,12 +29,30 @@ $(function() {
     //   printResponse(formattedData, template)
   // });
 
+  // TODO if I move the printResponse() to this level and set showProject and showTask
+  //        equal to vars then I could do the conditional filling for a project select
+  //        based on a client select.
   showProject();
   showTask();
-  $('#projectsContent').on('change', 'project', function ()
+
+  // Return project optgroup when a project is selected. Found this using element selector in chrome.
+  // TODO Match client label (name) to the client's id.
+  // TODO Grab project id for time entry build.
+  // TODO Make another function to watch for task change to get task id.
+  $('#projectsContent').on('change', '.project', function ()
   {
     var label = $(this.options[this.selectedIndex]).closest('optgroup').prop('label');
     console.log(label);
+
+    if(label != null){
+      var projectHeaderSource = $("#project-header-content-template").html();
+      var template = Handlebars.compile(projectHeaderSource);
+      $("#projectsHeaderContent").html(template(label));
+      $(".initProjectHeader").hide();
+    }else{
+      $(".projectHeader").hide();
+      $(".initProjectHeader").show();
+    }
   });
 });
 
@@ -54,6 +73,8 @@ function showProject() {
       printResponse("projects", formattedData, template)});
 }
 
+// Calls Harvest api for task list.
+// TODO call harvestProjectTasks to match the task id's to project id's.
 function showTask() {
   var source = $("#task-template").html();
   var template = Handlebars.compile(source);
