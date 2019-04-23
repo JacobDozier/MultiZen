@@ -8,17 +8,21 @@
 </head>
 <!-- TODO Need to rework the templates -->
 <body>
-  <script id="project-template" type="text/x-handlebars-template">
-    <h2>Project</h2>
+  <script id="project-header-content-template" type="text/x-handlebars-template">
+    <h2 class="projectHeader">Client: {{this}}</h2>
+  </script>
+<script id="project-template" type="text/x-handlebars-template">
+    <h2 class="initProjectHeader">Project</h2>
     <div>
       <select class="project" id="projects">
+        <option value="">Select a project</option>
         {{#each this}}
           <optgroup label="{{name}}">
             {{#each this.projectList}}
               {{#if selected}}
                 <option value="{{id}}" {{#selected}}selected="selected"{{/selected}}>{{name}}</option>
-              <!-- {{else}}
-                <option value="{{id}}">{{name}}</option> -->
+              {{else}}
+                <option value="{{id}}">{{name}}</option>
               {{/if}}
             {{/each}}
           </optgroup>
@@ -28,7 +32,7 @@
   </script>
   <!-- Displays the tasks for the selected (above) client/project -->
   <script id="task-template" type="text/x-handlebars-template">
-    <h2>Task</h2>
+    <h2 class="taskHeader">Task</h2>
     <div>
       <select class="task">
         <option value="">Select a task</option>
@@ -49,6 +53,7 @@
   <script type="json/javascript" src="apiCalls.js"></script>
   <script type="text/javascript" src="main.js"></script>
 
+  <div id="projectsHeaderContent"></div>
   <div id="projectsContent"></div>
   <div id="tasksContent"></div>
 </body>
