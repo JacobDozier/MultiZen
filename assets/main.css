@@ -23,3 +23,7 @@ html {
 iframe {
     height: 500px;
 }
+
+.taskHeader {
+    padding-top: 10px;
+}
