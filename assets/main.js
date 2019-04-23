@@ -3,7 +3,7 @@ $(function() {
   client.invoke('resize', { width: '100%', height: '350px' });
 
   // TODO Use this to secure api credentials.
-  // This won't work with local hosting because
+  // This won't work with local hosting because it triggers cross origin request issues.
   // var getProjects = {
   //   url: "https://api.harvestapp.com/v2/projects",
   //   headers: {
