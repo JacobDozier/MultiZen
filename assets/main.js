@@ -65,8 +65,8 @@ function showProject() {
   $.ajax({
       url: "https://api.harvestapp.com/v2/projects",
       headers: {
-          "Authorization": "Bearer 1798431.pt.nVpdLY3VMBZ-Z2-K2GBwL5H_ObIJHFpCWo82YSfDWcf7eQJ3q_bKyGkN29uuddg6sRR6Cch3_yCcPOEMv3MtBg",
-          "Harvest-Account-ID": "1009919"
+          "Authorization": "Bearer ",
+          "Harvest-Account-ID": ""
       }
   }).then(function(data){
       var formattedData = formatProjects(data);
@@ -83,8 +83,8 @@ function showTask() {
   $.ajax({
       url: "https://api.harvestapp.com/v2/tasks",
       headers: {
-          "Authorization": "Bearer 1798431.pt.nVpdLY3VMBZ-Z2-K2GBwL5H_ObIJHFpCWo82YSfDWcf7eQJ3q_bKyGkN29uuddg6sRR6Cch3_yCcPOEMv3MtBg",
-          "Harvest-Account-ID": "1009919"
+          "Authorization": "Bearer ",
+          "Harvest-Account-ID": ""
       }
   }).then(function(data){
       printResponse("tasks", data, template)});
