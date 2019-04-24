@@ -83,9 +83,9 @@ function showTask() {
   $.ajax({
       url: "https://api.harvestapp.com/v2/tasks",
       headers: {
-          "Authorization": "Bearer ",
-          "Harvest-Account-ID": ""
-      }
+        "Authorization": "Bearer ",
+        "Harvest-Account-ID": ""
+    }
   }).then(function(data){
       printResponse("tasks", data, template)});
 }

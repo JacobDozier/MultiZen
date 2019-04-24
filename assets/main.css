@@ -27,3 +27,7 @@ iframe {
 .taskHeader {
     padding-top: 10px;
 }
+
+.content {
+    font-size: 16;
+}
