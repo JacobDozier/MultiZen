@@ -8,7 +8,7 @@
 </head>
 <!-- TODO Need to rework the templates -->
 <body>
-  <script id="project-header-content-template" type="text/x-handlebars-template">
+  <script id="project-header-template" type="text/x-handlebars-template">
     <h2 class="projectHeader">Client: <b>{{this}}</b></h2>
   </script>
 <script id="project-template" type="text/x-handlebars-template">
@@ -42,6 +42,13 @@
       </select>
     </div>
   </script>
+  <!-- Display Harvest note value -->
+  <script id="notes-template" type="text/x-handlebars-template">
+    {{#each this}}
+    <p>#{{ticket.id}}: {{ticket.subject}}</p>
+    {{/each}}
+  </script>
+
   <!-- TODO Add template to display the Harvest notes. -->
 
   <!-- https://github.com/zendesk/zendesk_app_framework_sdk -->
@@ -55,11 +62,16 @@
   <script type="text/javascript" src="main.js"></script>
 
   <form id="timeSubmission">
-    <div class="content" id="projectsHeaderContent"></div>
+    <div class="projectHeader" id="projectsHeaderContent"></div>
     <div class="content" id="projectsContent"></div>
     <div class="content" id="tasksContent"></div>
-    <input class="content" id="duration" type="number" step="0.1" placeholder="0.0"/>
-    <input class="content" type="submit" value="Submit"/>
+    <div>
+    <input class="duration" id="duration" type="number" step="0.1" placeholder="0.0" hidden/>
+    <input class="submit" type="submit" value="Save Entry" hidden/>
+    <div class="notes" id="notesContent"></div>
+    <div>
+      <a href="https://multipub.harvestapp.com/time" target="_blank">Harvest</a>
+    </div>
   </form>
 </body>
 </html>

@@ -1,6 +1,6 @@
 $(function() {
   var client = ZAFClient.init();
-  client.invoke('resize', { width: '100%', height: '350px' });
+  client.invoke('resize', { width: '100%', height: '300px' });
 
   // TODO Use this to secure api credentials.
   // This won't work with local hosting because it triggers cross origin request issues.
@@ -45,20 +45,24 @@ $(function() {
     console.log(foundProduct);
 
     if(foundClient != null){
-      var projectHeaderSource = $("#project-header-content-template").html();
+      var projectHeaderSource = $("#project-header-template").html();
       var template = Handlebars.compile(projectHeaderSource);
       $("#projectsHeaderContent").html(template(foundClient));
       $(".initProjectHeader").hide();
+      $(".duration").show();
+      $(".submit").show();
     }else{
       $(".projectHeader").hide();
       $(".initProjectHeader").show();
+      $(".duration").hide();
+      $(".submit").hide();
     }
 
     showTask(foundProduct);
     return foundProduct, foundClient;
   });
 
-  console.log(foundClient, foundProduct);
+  showNotes(client);
 });
 
 function showProject() {
@@ -70,7 +74,7 @@ function showProject() {
   $.ajax({
       url: "https://api.harvestapp.com/v2/projects",
       headers: {
-          "Authorization": "Bearer ",
+          "Authorization": "",
           "Harvest-Account-ID": ""
       }
   }).then(function(data){
@@ -89,7 +93,7 @@ function showTask(projectId) {
   $.ajax({
       url: "https://api.harvestapp.com/v2/projects/" + projectId + "/task_assignments",
       headers: {
-        "Authorization": "Bearer ",
+        "Authorization": "",
         "Harvest-Account-ID": ""
     }
   }).then(function(data){
@@ -98,6 +102,21 @@ function showTask(projectId) {
       strippedTasks.push(projectTaskCombo.task);
     });
       printResponse("tasks", strippedTasks, template)});
+}
+
+// Get the Zendesk ticket id and subject to use as Harvest notes.
+function showNotes(client) {
+  var source = $("#notes-template").html();
+  var template = Handlebars.compile(source);
+  client.get(['ticket.id', 'ticket.subject']).then(function(data) {
+    var source = $("#notes-template").html();
+    var template = Handlebars.compile(source);
+    var ticketInfo = data['ticket.id'].toString + data['ticket.subject'];
+    console.log("ticketInfo");
+    console.log(ticketInfo);
+    printResponse("notes", ticketInfo, template);  
+  });
+
 }
 
 // Split JSON returned from Harvest to group projects by client.
