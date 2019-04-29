@@ -21,13 +21,17 @@ html {
 }
 
 iframe {
-    height: 500px;
-}
-
-.taskHeader {
-    padding-top: 10px;
+    height: 400px;
 }
 
 .content {
     font-size: 16;
+    padding-bottom: 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0;
+  font-size: 16;
 }
