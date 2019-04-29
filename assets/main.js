@@ -29,11 +29,9 @@ $(function() {
     //   printResponse(formattedData, template)
   // });
 
-  // TODO if I move the printResponse() to this level and set showProject and showTask
-  //        equal to vars then I could do the conditional filling for a project select
-  //        based on a client select.
   showProject();
-  showTask();
+
+  // TODO Build and display Harvest notes fields.
 
   // Return project optgroup when a project is selected. Found this using element selector in chrome.
   // TODO Match client label (name) to the client's id.
@@ -41,19 +39,26 @@ $(function() {
   // TODO Make another function to watch for task change to get task id.
   $('#projectsContent').on('change', '.project', function ()
   {
-    var label = $(this.options[this.selectedIndex]).closest('optgroup').prop('label');
-    console.log(label);
+    var foundClient = $(this.options[this.selectedIndex]).closest('optgroup').prop('label');
+    var foundProduct = $(this.options[this.selectedIndex]).prop('value');
+    console.log(foundClient);
+    console.log(foundProduct);
 
-    if(label != null){
+    if(foundClient != null){
       var projectHeaderSource = $("#project-header-content-template").html();
       var template = Handlebars.compile(projectHeaderSource);
-      $("#projectsHeaderContent").html(template(label));
+      $("#projectsHeaderContent").html(template(foundClient));
       $(".initProjectHeader").hide();
     }else{
       $(".projectHeader").hide();
       $(".initProjectHeader").show();
     }
+
+    showTask(foundProduct);
+    return foundProduct, foundClient;
   });
+
+  console.log(foundClient, foundProduct);
 });
 
 function showProject() {
@@ -75,19 +80,24 @@ function showProject() {
 
 // Calls Harvest api for task list.
 // TODO call harvestProjectTasks to match the task id's to project id's.
-function showTask() {
+function showTask(projectId) {
   var source = $("#task-template").html();
   var template = Handlebars.compile(source);
+  var strippedTasks = new Array();
 
-  // TODO use the Harvest Project Tasks to link Tasks to Projects.
+  // Use the Harvest Project Task Assignments to link Tasks to Projects.
   $.ajax({
-      url: "https://api.harvestapp.com/v2/tasks",
+      url: "https://api.harvestapp.com/v2/projects/" + projectId + "/task_assignments",
       headers: {
         "Authorization": "Bearer ",
         "Harvest-Account-ID": ""
     }
   }).then(function(data){
-      printResponse("tasks", data, template)});
+    var taskAssignList = data.task_assignments;
+    taskAssignList.forEach((projectTaskCombo) => {
+      strippedTasks.push(projectTaskCombo.task);
+    });
+      printResponse("tasks", strippedTasks, template)});
 }
 
 // Split JSON returned from Harvest to group projects by client.
@@ -123,7 +133,7 @@ function indexOfClient(clients, tempClient) {
 function printResponse(divLocation, data, template) {
   var harvestResponse = {}
   harvestResponse = data;
-  console.log("harvestResponse");
+  console.log("harvestResponse " + divLocation);
   console.log(harvestResponse);
   $("#" + divLocation + "Content").html(template(harvestResponse));
 }

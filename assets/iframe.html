@@ -36,12 +36,13 @@
     <div>
       <select class="task">
         <option value="">Select a task</option>
-        {{#each tasks}}
+        {{#each this}}
           <option value="{{id}}">{{name}}</option>
         {{/each}}
       </select>
     </div>
   </script>
+  <!-- TODO Add template to display the Harvest notes. -->
 
   <!-- https://github.com/zendesk/zendesk_app_framework_sdk -->
   <script type="text/javascript" src="https://assets.zendesk.com/apps/sdk/2.0/zaf_sdk.js"></script>
@@ -53,8 +54,12 @@
   <script type="json/javascript" src="apiCalls.js"></script>
   <script type="text/javascript" src="main.js"></script>
 
-  <div class="content" id="projectsHeaderContent"></div>
-  <div class="content" id="projectsContent"></div>
-  <div class="content" id="tasksContent"></div>
+  <form id="timeSubmission">
+    <div class="content" id="projectsHeaderContent"></div>
+    <div class="content" id="projectsContent"></div>
+    <div class="content" id="tasksContent"></div>
+    <input class="content" id="duration" type="number" step="0.1" placeholder="0.0"/>
+    <input class="content" type="submit" value="Submit"/>
+  </form>
 </body>
 </html>
