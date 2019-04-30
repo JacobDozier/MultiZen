@@ -74,8 +74,8 @@ function showProject() {
   $.ajax({
       url: "https://api.harvestapp.com/v2/projects",
       headers: {
-          "Authorization": "",
-          "Harvest-Account-ID": ""
+          "Authorization": "Bearer 1798431.pt.nVpdLY3VMBZ-Z2-K2GBwL5H_ObIJHFpCWo82YSfDWcf7eQJ3q_bKyGkN29uuddg6sRR6Cch3_yCcPOEMv3MtBg",
+          "Harvest-Account-ID": "1009919",
       }
   }).then(function(data){
       var formattedData = formatProjects(data);
@@ -93,9 +93,9 @@ function showTask(projectId) {
   $.ajax({
       url: "https://api.harvestapp.com/v2/projects/" + projectId + "/task_assignments",
       headers: {
-        "Authorization": "",
-        "Harvest-Account-ID": ""
-    }
+        "Authorization": "Bearer 1798431.pt.nVpdLY3VMBZ-Z2-K2GBwL5H_ObIJHFpCWo82YSfDWcf7eQJ3q_bKyGkN29uuddg6sRR6Cch3_yCcPOEMv3MtBg",
+        "Harvest-Account-Id": "1009919"
+      }
   }).then(function(data){
     var taskAssignList = data.task_assignments;
     taskAssignList.forEach((projectTaskCombo) => {
@@ -104,17 +104,16 @@ function showTask(projectId) {
       printResponse("tasks", strippedTasks, template)});
 }
 
-// Get the Zendesk ticket id and subject to use as Harvest notes.
+// Get the Zendesk ticket id and subject to use as Harvest notes.s
 function showNotes(client) {
-  var source = $("#notes-template").html();
-  var template = Handlebars.compile(source);
   client.get(['ticket.id', 'ticket.subject']).then(function(data) {
+    console.log(data);
     var source = $("#notes-template").html();
     var template = Handlebars.compile(source);
-    var ticketInfo = data['ticket.id'].toString + data['ticket.subject'];
+    var ticketInfo = "#" + data['ticket.id'] + ": " + data['ticket.subject'];
     console.log("ticketInfo");
     console.log(ticketInfo);
-    printResponse("notes", ticketInfo, template);  
+    printResponse("notes", ticketInfo, template);
   });
 
 }
