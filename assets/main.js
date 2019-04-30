@@ -1,10 +1,11 @@
 $(function() {
-  var client = ZAFClient.init();
+  let client = ZAFClient.init();
   client.invoke('resize', { width: '100%', height: '300px' });
+  let timeEntry = new Array();
 
   // TODO Use this to secure api credentials.
   // This won't work with local hosting because it triggers cross origin request issues.
-  // var getProjects = {
+  // let getProjects = {
   //   url: "https://api.harvestapp.com/v2/projects",
   //   headers: {
   //   "Authorization": "Bearer {{setting.token}}",
@@ -14,7 +15,7 @@ $(function() {
   //   dataType: 'json'
   // };
 
-  // var getTasks = {
+  // let getTasks = {
   //   url: "https://api.harvestapp.com/v2/tasks",
   //   headers: {
   //   "Authorization": "Bearer {{setting.token}}",
@@ -25,28 +26,27 @@ $(function() {
   // };
   
   // client.request(getProjects).then(function(data){
-    //   var formattedData = formatProjects(data);
+    //   let formattedData = formatProjects(data);
     //   printResponse(formattedData, template)
   // });
 
   showProject();
 
-  // TODO Build and display Harvest notes fields.
-
-  // Return project optgroup when a project is selected. Found this using element selector in chrome.
-  // TODO Match client label (name) to the client's id.
-  // TODO Grab project id for time entry build.
-  // TODO Make another function to watch for task change to get task id.
-  $('#projectsContent').on('change', '.project', function ()
-  {
-    var foundClient = $(this.options[this.selectedIndex]).closest('optgroup').prop('label');
-    var foundProduct = $(this.options[this.selectedIndex]).prop('value');
+  // Grab project id for time entry build.
+  $('#projectsContent').on('change', '.project', function () {
+    // Blank out time entry.
+    timeEntry = [];
+    // Get the client name and product id from the dropdown.
+    let foundClient = $(this.options[this.selectedIndex]).closest('optgroup').prop('label');
+    let foundProduct = $(this.options[this.selectedIndex]).prop('value');
     console.log(foundClient);
     console.log(foundProduct);
+    timeEntry.push(foundProduct);
 
+    // Change the Project header upon selection. (show/hide)
     if(foundClient != null){
-      var projectHeaderSource = $("#project-header-template").html();
-      var template = Handlebars.compile(projectHeaderSource);
+      let projectHeaderSource = $("#project-header-template").html();
+      let template = Handlebars.compile(projectHeaderSource);
       $("#projectsHeaderContent").html(template(foundClient));
       $(".initProjectHeader").hide();
       $(".duration").show();
@@ -57,78 +57,115 @@ $(function() {
       $(".duration").hide();
       $(".submit").hide();
     }
-
+    // When a project is selected, show task dropdown.
     showTask(foundProduct);
-    return foundProduct, foundClient;
+    showNotes(client);
+    // Grab the task Id.
+    $('#tasksContent').on('change', '.task', function () {
+      let foundTask = $(this.options[this.selectedIndex]).prop('value');
+      console.log("foundTask");
+      console.log(foundTask);
+      timeEntry.push(foundTask);
+      console.log("timeEntry");
+      console.log(timeEntry);
+    });
+    // TODO Grab duration. Something is wrong here.
+    $('#duration').on('keydown', '.duration', function () {
+      let foundDuration = $(this.options[this.selectedIndex]).prop('value');
+      console.log("foundDuration");
+      console.log(foundDuration);
+    });
   });
 
-  showNotes(client);
+  // Send time entry to Harvest.
+  //   $("#timeSubmission").submit(function(event) {
+  //     $.ajax({
+  //       url: "https://api.harvestapp.com/v2/projects",
+  //       headers: {
+  //           "Authorization": "Bearer 1798431.pt.nVpdLY3VMBZ-Z2-K2GBwL5H_ObIJHFpCWo82YSfDWcf7eQJ3q_bKyGkN29uuddg6sRR6Cch3_yCcPOEMv3MtBg",
+  //           "Harvest-Account-ID": "1009919",
+  //       }
+  //     }).success(function(data){
+  //   });
+  // });
+
+  // Get notes. Don't actually need the ticket id and subject, just the string. Change method.
+  // let returnedNotes = showNotes();
+  // returnedNotes = Promise.resolve(returnedNotes);
+  // console.log("returnedNotes");
+  // console.log(Promise.resolve(returnedNotes));
 });
 
 function showProject() {
-  var source = $("#project-template").html();
-  var template = Handlebars.compile(source);
+  let source = $("#project-template").html();
+  let template = Handlebars.compile(source);
 
   // Call Harvest api for the first page of projects.
   // TODO Loop through all populated pages of projects. Max 100/page.
   $.ajax({
       url: "https://api.harvestapp.com/v2/projects",
       headers: {
-          "Authorization": "Bearer 1798431.pt.nVpdLY3VMBZ-Z2-K2GBwL5H_ObIJHFpCWo82YSfDWcf7eQJ3q_bKyGkN29uuddg6sRR6Cch3_yCcPOEMv3MtBg",
-          "Harvest-Account-ID": "1009919",
+          "Authorization": "Bearer ",
+          "Harvest-Account-ID": "",
       }
   }).then(function(data){
-      var formattedData = formatProjects(data);
+      let formattedData = formatProjects(data);
       printResponse("projects", formattedData, template)});
 }
 
 // Calls Harvest api for task list.
 // TODO call harvestProjectTasks to match the task id's to project id's.
 function showTask(projectId) {
-  var source = $("#task-template").html();
-  var template = Handlebars.compile(source);
-  var strippedTasks = new Array();
+  let source = $("#task-template").html();
+  let template = Handlebars.compile(source);
+  let strippedTasks = new Array();
 
   // Use the Harvest Project Task Assignments to link Tasks to Projects.
   $.ajax({
       url: "https://api.harvestapp.com/v2/projects/" + projectId + "/task_assignments",
       headers: {
-        "Authorization": "Bearer 1798431.pt.nVpdLY3VMBZ-Z2-K2GBwL5H_ObIJHFpCWo82YSfDWcf7eQJ3q_bKyGkN29uuddg6sRR6Cch3_yCcPOEMv3MtBg",
-        "Harvest-Account-Id": "1009919"
+        "Authorization": "Bearer ",
+        "Harvest-Account-Id": ""
       }
   }).then(function(data){
-    var taskAssignList = data.task_assignments;
+    let taskAssignList = data.task_assignments;
     taskAssignList.forEach((projectTaskCombo) => {
       strippedTasks.push(projectTaskCombo.task);
     });
       printResponse("tasks", strippedTasks, template)});
 }
 
-// Get the Zendesk ticket id and subject to use as Harvest notes.s
+// Get the Zendesk ticket id and subject to use as Harvest notes.
+// TODO just return the string for the notes. Might need a separate call/function to build a url.
 function showNotes(client) {
-  client.get(['ticket.id', 'ticket.subject']).then(function(data) {
-    console.log(data);
-    var source = $("#notes-template").html();
-    var template = Handlebars.compile(source);
-    var ticketInfo = "#" + data['ticket.id'] + ": " + data['ticket.subject'];
-    console.log("ticketInfo");
-    console.log(ticketInfo);
-    printResponse("notes", ticketInfo, template);
-  });
+  let notesPromise = client.get(['ticket.id', 'ticket.subject']).then(function(data) {
+    let source = $("#notes-template").html();
+    let template = Handlebars.compile(source);
 
+    let ticketInfo = "#" + data['ticket.id'] + ": " + data['ticket.subject'];
+    printResponse("notes", ticketInfo, template);
+    
+    let returnNotesPromise = new Array();
+    returnNotesPromise.push(data['ticket.id']);
+    returnNotesPromise.push(data['ticket.subject']);
+    console.log("returnNotesPromise");
+    console.log(returnNotesPromise);
+    return returnNotesPromise;
+  });
+  return Promise.resolve(returnNotesPromise);
 }
 
 // Split JSON returned from Harvest to group projects by client.
 function formatProjects(data) {
-  var clients = new Array();
-  var projects = data.projects;
+  let clients = new Array();
+  let projects = data.projects;
   projects.forEach((project) => {
 
-    var tempClient = project.client;
+    let tempClient = project.client;
     // add a (empty) project array to the client.
     tempClient.projectList = [];
 
-    var i = indexOfClient(clients, tempClient);
+    let i = indexOfClient(clients, tempClient);
     if (i >= 0) {
       clients[i].projectList.push({"id": project.id, "name": project.name});
     } else { // Else if the client id is not in the clients array.
@@ -140,7 +177,7 @@ function formatProjects(data) {
 }
   
 function indexOfClient(clients, tempClient) {
-  for (var i = 0; i < clients.length; i++) {
+  for (let i = 0; i < clients.length; i++) {
     if (clients[i].id === tempClient.id) {
       return i;
     }
@@ -149,7 +186,7 @@ function indexOfClient(clients, tempClient) {
 }
 
 function printResponse(divLocation, data, template) {
-  var harvestResponse = {}
+  let harvestResponse = {}
   harvestResponse = data;
   console.log("harvestResponse " + divLocation);
   console.log(harvestResponse);
