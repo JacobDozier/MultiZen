@@ -5,6 +5,9 @@ $(function() {
   client.invoke('resize', { width: '100%', height: '300px' });
   let timeEntry = new Array();
 
+  // This will apply the style but break the dropdown.
+  // $('.content').chosen();
+
   // TODO Use this to secure api credentials.
   // This won't work with local hosting because it triggers cross origin request issues.
   // let getProjects = {
@@ -35,7 +38,9 @@ $(function() {
   showProject(myToken, myId);
 
   // Grab project id for time entry build.
-  $('#projectsContent').on('change', '.project', function () {
+  $('#projectsContent').on('change', '#projects', function () {
+    // $('select').chosen();
+    // $('select').trigger("chosen:updated");
     // Blank out time entry.
     timeEntry = [];
     // Get the client name and product id from the dropdown.
@@ -154,7 +159,7 @@ function showNotes(client) {
     console.log(returnNotesPromise);
     return returnNotesPromise;
   });
-  return Promise.resolve(returnNotesPromise);
+  return Promise.resolve(notesPromise);
 }
 
 // Split JSON returned from Harvest to group projects by client.

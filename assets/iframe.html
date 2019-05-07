@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@zendeskgarden/css-bedrock@7.0" type="text/css">
   <!-- Additional styling -->
   <link rel="stylesheet" href="main.css" type="text/css">
+  <link rel="stylesheet" href="chosen.css" type="text/css">
 </head>
 <!-- TODO Need to rework the templates -->
 <body>
@@ -14,7 +15,7 @@
 <script id="project-template" type="text/x-handlebars-template">
     <h2 class="initProjectHeader">Project</h2>
     <div>
-      <select class="project" id="projects">
+      <select class="project chosen" id="projects">
         <option value="">Select a project</option>
         {{#each this}}
           <optgroup label="{{name}}">
@@ -34,7 +35,7 @@
   <script id="task-template" type="text/x-handlebars-template">
     <h2 class="taskHeader">Task</h2>
     <div>
-      <select class="task">
+      <select class="task" id="tasks">
         <option value="">Select a task</option>
         {{#each this}}
           <option value="{{id}}">{{name}}</option>
@@ -56,6 +57,7 @@
   <!-- Import JQuery -->
   <script src="https://cdn.jsdelivr.net/jquery/3.2.1/jquery.min.js"></script>
 
+  <script type="text/javascript" src="chosen.jquery.js"></script>
   <script type="text/javascript" src="config.js"></script>
   <script type="text/javascript" src="main.js"></script>
 
