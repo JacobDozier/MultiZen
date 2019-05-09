@@ -39,8 +39,7 @@ $(function() {
 
   // Grab project id for time entry build.
   $('#projectsContent').on('change', '#projects', function () {
-    // $('select').chosen();
-    // $('select').trigger("chosen:updated");
+    $('select').trigger("chosen:updated");
     // Blank out time entry.
     timeEntry = [];
     // Get the client name and product id from the dropdown.
@@ -69,6 +68,7 @@ $(function() {
     showNotes(client);
     // Grab the task Id.
     $('#tasksContent').on('change', '.task', function () {
+      $('select').trigger("chosen:updated");
       let foundTask = $(this.options[this.selectedIndex]).prop('value');
       console.log("foundTask");
       console.log(foundTask);
@@ -106,6 +106,8 @@ $(function() {
 function showProject(myToken, myId) {
   let source = $("#project-template").html();
   let template = Handlebars.compile(source);
+  $('projects').chosen();
+  $('projects').trigger('chosen:updated');
 
   // Call Harvest api for the first page of projects.
   // TODO Loop through all populated pages of projects. Max 100/page.
@@ -193,6 +195,8 @@ function indexOfClient(clients, tempClient) {
 }
 
 function printResponse(divLocation, data, template) {
+  $('select').chosen();
+  $('select').trigger('chosen:updated')
   let harvestResponse = {}
   harvestResponse = data;
   console.log("harvestResponse " + divLocation);
