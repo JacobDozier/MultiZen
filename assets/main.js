@@ -1,6 +1,4 @@
 $(function() {
-  let myToken = config.MY_TOKEN;
-  let myId = config.MY_ID;
   let client = ZAFClient.init();
   client.invoke('resize', { width: '100%', height: '300px' });
   let timeEntry = new Array();
@@ -32,7 +30,7 @@ $(function() {
     //   printResponse(formattedData, template)
   // });
 
-  showProject(myToken, myId);
+  showProject();
 
   // Grab project id for time entry build.
   $('#projectsContent').on('change', '.project', function () {
@@ -60,7 +58,7 @@ $(function() {
       $(".submit").hide();
     }
     // When a project is selected, show task dropdown.
-    showTask(foundProduct, myToken, myId);
+    showTask(foundProduct);
     showNotes(client);
     // Grab the task Id.
     $('#tasksContent').on('change', '.task', function () {
@@ -98,7 +96,7 @@ $(function() {
   // console.log(Promise.resolve(returnedNotes));
 });
 
-function showProject(myToken, myId) {
+function showProject() {
   let source = $("#project-template").html();
   let template = Handlebars.compile(source);
 
@@ -107,8 +105,8 @@ function showProject(myToken, myId) {
   $.ajax({
       url: "https://api.harvestapp.com/v2/projects",
       headers: {
-          "Authorization": "Bearer " + myToken,
-          "Harvest-Account-ID": myId
+          "Authorization": "Bearer ",
+          "Harvest-Account-ID": "",
       }
   }).then(function(data){
       let formattedData = formatProjects(data);
@@ -117,7 +115,7 @@ function showProject(myToken, myId) {
 
 // Calls Harvest api for task list.
 // TODO call harvestProjectTasks to match the task id's to project id's.
-function showTask(projectId, myToken, myId) {
+function showTask(projectId) {
   let source = $("#task-template").html();
   let template = Handlebars.compile(source);
   let strippedTasks = new Array();
@@ -126,8 +124,8 @@ function showTask(projectId, myToken, myId) {
   $.ajax({
       url: "https://api.harvestapp.com/v2/projects/" + projectId + "/task_assignments",
       headers: {
-        "Authorization": "Bearer " + myToken,
-        "Harvest-Account-Id": myId
+        "Authorization": "Bearer ",
+        "Harvest-Account-Id": ""
       }
   }).then(function(data){
     let taskAssignList = data.task_assignments;
