@@ -1,4 +1,6 @@
 $(function() {
+  let myToken = config.MY_TOKEN;
+  let myId = config.MY_ID;
   let client = ZAFClient.init();
   client.invoke('resize', { width: '100%', height: '300px' });
   let timeEntry = new Array();
@@ -30,7 +32,7 @@ $(function() {
     //   printResponse(formattedData, template)
   // });
 
-  showProject();
+  showProject(myToken, myId);
 
   // Grab project id for time entry build.
   $('#projectsContent').on('change', '.project', function () {
@@ -58,7 +60,7 @@ $(function() {
       $(".submit").hide();
     }
     // When a project is selected, show task dropdown.
-    showTask(foundProduct);
+    showTask(foundProduct, myToken, myId);
     showNotes(client);
     // Grab the task Id.
     $('#tasksContent').on('change', '.task', function () {
@@ -96,7 +98,7 @@ $(function() {
   // console.log(Promise.resolve(returnedNotes));
 });
 
-function showProject() {
+function showProject(myToken, myId) {
   let source = $("#project-template").html();
   let template = Handlebars.compile(source);
 
@@ -105,8 +107,8 @@ function showProject() {
   $.ajax({
       url: "https://api.harvestapp.com/v2/projects",
       headers: {
-          "Authorization": "Bearer ",
-          "Harvest-Account-ID": "",
+          "Authorization": "Bearer " + myToken,
+          "Harvest-Account-ID": myId
       }
   }).then(function(data){
       let formattedData = formatProjects(data);
@@ -115,7 +117,7 @@ function showProject() {
 
 // Calls Harvest api for task list.
 // TODO call harvestProjectTasks to match the task id's to project id's.
-function showTask(projectId) {
+function showTask(projectId, myToken, myId) {
   let source = $("#task-template").html();
   let template = Handlebars.compile(source);
   let strippedTasks = new Array();
@@ -124,8 +126,8 @@ function showTask(projectId) {
   $.ajax({
       url: "https://api.harvestapp.com/v2/projects/" + projectId + "/task_assignments",
       headers: {
-        "Authorization": "Bearer ",
-        "Harvest-Account-Id": ""
+        "Authorization": "Bearer " + myToken,
+        "Harvest-Account-Id": myId
       }
   }).then(function(data){
     let taskAssignList = data.task_assignments;
@@ -152,7 +154,7 @@ function showNotes(client) {
     console.log(returnNotesPromise);
     return returnNotesPromise;
   });
-  return Promise.resolve(returnNotesPromise);
+  return Promise.resolve(notesPromise);
 }
 
 // Split JSON returned from Harvest to group projects by client.
