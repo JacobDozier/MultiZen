@@ -43,7 +43,7 @@ $(function() {
     let foundProduct = $(this.options[this.selectedIndex]).prop('value');
     console.log(foundClient);
     console.log(foundProduct);
-    timeEntry.push(foundProduct);
+    timeEntry[0] = foundProduct;
 
     // Change the Project header upon selection. (show/hide)
     if(foundClient != null){
@@ -63,20 +63,20 @@ $(function() {
     showTask(foundProduct, myToken, myId);
     showNotes(client);
     // Grab the task Id.
-    $('#tasksContent').on('change', '.task', function () {
-      let foundTask = $(this.options[this.selectedIndex]).prop('value');
-      console.log("foundTask");
-      console.log(foundTask);
-      timeEntry.push(foundTask);
-      console.log("timeEntry");
-      console.log(timeEntry);
-    });
-    // TODO Grab duration. Something is wrong here.
-    $('#duration').on('keydown', '.duration', function () {
-      let foundDuration = $(this.options[this.selectedIndex]).prop('value');
-      console.log("foundDuration");
-      console.log(foundDuration);
-    });
+  });
+  $('#tasksContent').on('change', '.task', function () {
+    let foundTask = $(this.options[this.selectedIndex]).prop('value');
+    console.log("foundTask");
+    console.log(foundTask);
+    timeEntry[1] = foundTask;
+    console.log("timeEntry");
+    console.log(timeEntry);
+  });
+  // TODO Grab duration. Something is wrong here.
+  $('#duration').on('keydown', '#duration', function () {
+    let foundDuration = $('#duration');
+    console.log("foundDuration");
+    console.log(foundDuration);
   });
 
   // Send time entry to Harvest.
