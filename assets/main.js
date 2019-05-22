@@ -117,7 +117,9 @@ function showProject(myToken, myId) {
   });
 
   // Call Harvest api for the first page of projects.
-  // TODO Loop through all populated pages of projects. Max 100/page.
+  // Number of pages in Harvest Projects is known to be 2. Max 100/page.
+  // This could grow higher if many new clients are added and would reguire
+  // all pages.
 
   $.when(projectPage1, projectPage2).then(function(data1, data2){
     console.log(".when");
@@ -127,31 +129,6 @@ function showProject(myToken, myId) {
     printResponse("projects", projectData, template);
   });
 }
-//   $.ajax({
-//       url: "https://api.harvestapp.com/v2/projects",
-//       headers: {
-//           "Authorization": "Bearer " + myToken,
-//           "Harvest-Account-ID": myId
-//       }
-//   }, formattedData).then(function(data){
-//     formattedData = formatProjects(data);
-//   });
-//   $.ajax({
-//     url: "https://api.harvestapp.com/v2/projects?page=2",
-//     headers: {
-//         "Authorization": "Bearer " + myToken,
-//         "Harvest-Account-ID": myId
-//     }
-//   }, formattedData1).then(function(data){
-//     formattedData1 = formatProjects(data);
-//     console.log("formattedData1");
-//     console.log(formattedData1);
-//   });
-//   projectData = formattedData.concat(formattedData1);
-//   console.log("projectData");
-//   console.log(projectData);
-//   printResponse("projects", projectData, template);
-// }
 
 // Calls Harvest api for task list.
 // TODO call harvestProjectTasks to match the task id's to project id's.
