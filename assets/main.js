@@ -101,19 +101,57 @@ $(function() {
 function showProject(myToken, myId) {
   let source = $("#project-template").html();
   let template = Handlebars.compile(source);
+  let projectPage1 = $.ajax({
+    url: "https://api.harvestapp.com/v2/projects",
+    headers: {
+        "Authorization": "Bearer " + myToken,
+        "Harvest-Account-ID": myId
+    }
+  });
+  let projectPage2 = $.ajax({
+    url: "https://api.harvestapp.com/v2/projects?page=2",
+    headers: {
+        "Authorization": "Bearer " + myToken,
+        "Harvest-Account-ID": myId
+    }
+  });
 
   // Call Harvest api for the first page of projects.
   // TODO Loop through all populated pages of projects. Max 100/page.
-  $.ajax({
-      url: "https://api.harvestapp.com/v2/projects",
-      headers: {
-          "Authorization": "Bearer " + myToken,
-          "Harvest-Account-ID": myId
-      }
-  }).then(function(data){
-      let formattedData = formatProjects(data);
-      printResponse("projects", formattedData, template)});
+
+  $.when(projectPage1, projectPage2).then(function(data1, data2){
+    console.log(".when");
+    console.log(data1);
+    console.log(data2);
+    projectData = formatProjects(data1).concat(formatProjects(data2));
+    printResponse("projects", projectData, template);
+  });
 }
+//   $.ajax({
+//       url: "https://api.harvestapp.com/v2/projects",
+//       headers: {
+//           "Authorization": "Bearer " + myToken,
+//           "Harvest-Account-ID": myId
+//       }
+//   }, formattedData).then(function(data){
+//     formattedData = formatProjects(data);
+//   });
+//   $.ajax({
+//     url: "https://api.harvestapp.com/v2/projects?page=2",
+//     headers: {
+//         "Authorization": "Bearer " + myToken,
+//         "Harvest-Account-ID": myId
+//     }
+//   }, formattedData1).then(function(data){
+//     formattedData1 = formatProjects(data);
+//     console.log("formattedData1");
+//     console.log(formattedData1);
+//   });
+//   projectData = formattedData.concat(formattedData1);
+//   console.log("projectData");
+//   console.log(projectData);
+//   printResponse("projects", projectData, template);
+// }
 
 // Calls Harvest api for task list.
 // TODO call harvestProjectTasks to match the task id's to project id's.
@@ -159,23 +197,23 @@ function showNotes(client) {
 
 // Split JSON returned from Harvest to group projects by client.
 function formatProjects(data) {
-  let clients = new Array();
-  let projects = data.projects;
+  let myClients = new Array();
+  let projects = data[0].projects;
   projects.forEach((project) => {
 
     let tempClient = project.client;
     // add a (empty) project array to the client.
     tempClient.projectList = [];
 
-    let i = indexOfClient(clients, tempClient);
+    let i = indexOfClient(myClients, tempClient);
     if (i >= 0) {
-      clients[i].projectList.push({"id": project.id, "name": project.name});
+      myClients[i].projectList.push({"id": project.id, "name": project.name});
     } else { // Else if the client id is not in the clients array.
       tempClient.projectList.push({"id": project.id, "name": project.name});
-      clients.push(tempClient);
+      myClients.push(tempClient);
     }
   });
-  return clients;
+  return myClients;
 }
   
 function indexOfClient(clients, tempClient) {
@@ -188,7 +226,7 @@ function indexOfClient(clients, tempClient) {
 }
 
 function printResponse(divLocation, data, template) {
-  let harvestResponse = {}
+  let harvestResponse = {};
   harvestResponse = data;
   console.log("harvestResponse " + divLocation);
   console.log(harvestResponse);
