@@ -101,6 +101,7 @@ $(function() {
 function showProject(myToken, myId) {
   let source = $("#project-template").html();
   let template = Handlebars.compile(source);
+  let projectData = new Array();
   let projectPage1 = $.ajax({
     url: "https://api.harvestapp.com/v2/projects",
     headers: {
@@ -125,7 +126,7 @@ function showProject(myToken, myId) {
     console.log(".when");
     console.log(data1);
     console.log(data2);
-    projectData = formatProjects(data1).concat(formatProjects(data2));
+    projectData = formatProjects(data1, projectData).concat(formatProjects(data2, projectData));
     printResponse("projects", projectData, template);
   });
 }
@@ -173,7 +174,8 @@ function showNotes(client) {
 }
 
 // Split JSON returned from Harvest to group projects by client.
-function formatProjects(data) {
+// TODO Handle the two pages that are being retrieved from Harvest.
+function formatProjects(data, projectData) {
   let myClients = new Array();
   let projects = data[0].projects;
   projects.forEach((project) => {
@@ -182,7 +184,7 @@ function formatProjects(data) {
     // add a (empty) project array to the client.
     tempClient.projectList = [];
 
-    let i = indexOfClient(myClients, tempClient);
+    let i = indexOfClient(myClients, tempClient, projectData);
     if (i >= 0) {
       myClients[i].projectList.push({"id": project.id, "name": project.name});
     } else { // Else if the client id is not in the clients array.
@@ -193,10 +195,18 @@ function formatProjects(data) {
   return myClients;
 }
   
-function indexOfClient(clients, tempClient) {
-  for (let i = 0; i < clients.length; i++) {
-    if (clients[i].id === tempClient.id) {
-      return i;
+function indexOfClient(clients, tempClient, projectData) {
+  if (projectData.length !== 0) {
+    for (let i = 0; i < projectData.length; i++) {
+      if (projectData[i].id === tempClient.id) {
+        return i;
+      }
+    }
+  } else {  
+    for (let i = 0; i < clients.length; i++) {
+      if (clients[i].id === tempClient.id) {
+        return i;
+      }
     }
   }
   return -1;
