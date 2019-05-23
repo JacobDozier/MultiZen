@@ -103,14 +103,14 @@ function showProject(myToken, myId) {
   let template = Handlebars.compile(source);
   let projectData = new Array();
   let projectPage1 = $.ajax({
-    url: "https://api.harvestapp.com/v2/projects",
+    url: "https://api.harvestapp.com/v2/projects?is_active=true",
     headers: {
         "Authorization": "Bearer " + myToken,
-        "Harvest-Account-ID": myId
+        "Harvest-Account-ID": myId,
     }
   });
   let projectPage2 = $.ajax({
-    url: "https://api.harvestapp.com/v2/projects?page=2",
+    url: "https://api.harvestapp.com/v2/projects?page=2&is_active=true",
     headers: {
         "Authorization": "Bearer " + myToken,
         "Harvest-Account-ID": myId
@@ -121,12 +121,16 @@ function showProject(myToken, myId) {
   // Number of pages in Harvest Projects is known to be 2. Max 100/page.
   // This could grow higher if many new clients are added and would reguire
   // all pages.
-
   $.when(projectPage1, projectPage2).then(function(data1, data2){
     console.log(".when");
     console.log(data1);
     console.log(data2);
-    projectData = formatProjects(data1, projectData).concat(formatProjects(data2, projectData));
+    data1 = formatProjects(data1);
+    data2 = formatProjects(data2);
+    projectData = data1.concat(data2);
+    console.log("projectData");
+    console.log(projectData);
+    projectData = mergePages(projectData);
     printResponse("projects", projectData, template);
   });
 }
@@ -140,7 +144,7 @@ function showTask(projectId, myToken, myId) {
 
   // Use the Harvest Project Task Assignments to link Tasks to Projects.
   $.ajax({
-      url: "https://api.harvestapp.com/v2/projects/" + projectId + "/task_assignments",
+      url: "https://api.harvestapp.com/v2/projects/" + projectId + "/task_assignments?is_active=true",
       headers: {
         "Authorization": "Bearer " + myToken,
         "Harvest-Account-Id": myId
@@ -175,7 +179,8 @@ function showNotes(client) {
 
 // Split JSON returned from Harvest to group projects by client.
 // TODO Handle the two pages that are being retrieved from Harvest.
-function formatProjects(data, projectData) {
+function formatProjects(data) {
+  console.log("Reached formatProjects");
   let myClients = new Array();
   let projects = data[0].projects;
   projects.forEach((project) => {
@@ -184,7 +189,7 @@ function formatProjects(data, projectData) {
     // add a (empty) project array to the client.
     tempClient.projectList = [];
 
-    let i = indexOfClient(myClients, tempClient, projectData);
+    let i = indexOfClient(myClients, tempClient);
     if (i >= 0) {
       myClients[i].projectList.push({"id": project.id, "name": project.name});
     } else { // Else if the client id is not in the clients array.
@@ -194,22 +199,33 @@ function formatProjects(data, projectData) {
   });
   return myClients;
 }
-  
-function indexOfClient(clients, tempClient, projectData) {
-  if (projectData.length !== 0) {
-    for (let i = 0; i < projectData.length; i++) {
-      if (projectData[i].id === tempClient.id) {
-        return i;
-      }
-    }
-  } else {  
-    for (let i = 0; i < clients.length; i++) {
-      if (clients[i].id === tempClient.id) {
-        return i;
-      }
+
+// Helper for formatProjects().
+function indexOfClient(clients, tempClient) {
+  for (let i = 0; i < clients.length; i++) {
+    if (clients[i].id === tempClient.id) {
+      return i;
     }
   }
   return -1;
+}
+
+// Looks through concatenated pages to see if there are projects that
+// got cut off and merge them.
+// TODO It doesn't like data[i].name (the .name part).
+function mergePages(data) {
+  console.log("Reached mergePages");
+  console.log("data");
+  console.log(data);
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].name === data[i+1].name) {
+      for (let j = 0; j < data[i+1].projectList.length; j++) {
+        data[i].projectList.push(data[i+1].projectList[j]);
+      }
+      data.splice(i+1, 1);
+    }
+  }
+  return data;
 }
 
 function printResponse(divLocation, data, template) {
